@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CardList from './componets/card-list/card-list.component';
 import './App.css';
 
 class App extends Component {
@@ -25,11 +26,7 @@ componentDidMount =() => {
 render() {
   return (
     <div className="App">
-      {
-        this.state.users.map((users) => {
-          return <h1>{users.name}</h1>;
-        })
-      }
+      <CardList users={this.state.users} />
     </div>
   );
 }
